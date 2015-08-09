@@ -10,6 +10,8 @@ using Rocket.Unturned;
 using UnityEngine;
 using SDG.Unturned;
 using Rocket.Core.Logging;
+using Rocket.Unturned.Player;
+using Steamworks;
 
 
 namespace CustomMOTD
@@ -117,10 +119,18 @@ namespace CustomMOTD
             {
                 RocketChat.Say(player, this.Configuration.onlinemsgtext + " " + Steam.Players.Count() + "/" + Steam.MaxPlayers + " " + this.Configuration.onlinemsgtext2, RocketChat.GetColorFromName(this.Configuration.onlinemsgcolor, Color.yellow));
             }
-
-
-
-
+            if (this.Configuration.adminonlinemsg)
+            {
+                if (player.HasPermission("adminmsg"))
+                {
+                    RocketChat.Say(this.Configuration.adminonlinetxt1 + " " + player.CharacterName + " " + this.Configuration.adminonlinetxt2, RocketChat.GetColorFromName(this.Configuration.adminonlinecolor, Color.cyan));
+                }
+                if (player.IsAdmin)
+                {
+                    RocketChat.Say(this.Configuration.adminonlinetxt1 + " " + player.CharacterName + " " + this.Configuration.adminonlinetxt2, RocketChat.GetColorFromName(this.Configuration.adminonlinecolor, Color.cyan));
+                }
+            }
+            
 
 
         }

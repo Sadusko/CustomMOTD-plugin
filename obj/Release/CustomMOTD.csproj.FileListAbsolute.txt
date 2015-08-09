@@ -36,3 +36,15 @@ C:\Users\Delano\documents\visual studio 2010\Projects\CustomMOTD\CustomMOTD\bin\
 C:\Users\Delano\documents\visual studio 2010\Projects\CustomMOTD\CustomMOTD\obj\Release\CustomMOTD.csprojResolveAssemblyReference.cache
 C:\Users\Delano\documents\visual studio 2010\Projects\CustomMOTD\CustomMOTD\obj\Release\CustomMOTD.dll
 C:\Users\Delano\documents\visual studio 2010\Projects\CustomMOTD\CustomMOTD\obj\Release\CustomMOTD.pdb
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\bin\Release\CustomMOTD.dll
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\bin\Release\CustomMOTD.pdb
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\bin\Release\Pathfinding.JsonFx.dll
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\bin\Release\Pathfinding.Ionic.Zip.Reduced.dll
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\bin\Release\Pathfinding.ClipperLib.dll
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\bin\Release\Pathfinding.Poly2Tri.dll
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\bin\Release\Boo.Lang.dll
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\bin\Release\UnityScript.Lang.dll
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\bin\Release\UnityEngine.xml
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\obj\Release\CustomMOTD.csprojResolveAssemblyReference.cache
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\obj\Release\CustomMOTD.dll
+C:\Users\Eigenaar\Desktop\Coding\C#\Projects\CustomMOTD\CustomMOTD\obj\Release\CustomMOTD.pdb

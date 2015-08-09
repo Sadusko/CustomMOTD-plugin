@@ -21,11 +21,15 @@ namespace CustomMOTD
         public string line3color;
         public bool onlinemsg;
         public string onlinemsgcolor;
+        public bool adminonlinemsg;
+        public string adminonlinecolor;
         public string txtline1;
         public string txtline2;
         public string txtline3;
         public string onlinemsgtext;
         public string onlinemsgtext2;
+        public string adminonlinetxt1;
+        public string adminonlinetxt2;
 
         public IRocketPluginConfiguration DefaultConfiguration
         {
@@ -41,12 +45,15 @@ namespace CustomMOTD
                     line3color = "blue",
                     onlinemsg = true,
                     onlinemsgcolor = "yellow",
+                    adminonlinemsg = true,
+                    adminonlinecolor = "cyan",
                     txtline1 = "Hey, Welcome to the server!",
                     txtline2 = "The staff welcomes you to the server!",
                     txtline3 = "We are glad to have you here! Now get rid of those zombies! :)",
                     onlinemsgtext = "There are",
                     onlinemsgtext2 = "players online right now!",
-
+                    adminonlinetxt1 = "Administrator",
+                    adminonlinetxt2 = "has joined the server!",
                 };
 
             }

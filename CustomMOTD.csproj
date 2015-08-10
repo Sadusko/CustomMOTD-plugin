@@ -32,22 +32,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\Desktop\Rocket Development\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\Coding\C#\Rocket\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Unturned\Unturned_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-UnityScript-firstpass">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Unturned\Unturned_Data\Managed\Assembly-UnityScript-firstpass.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\Assembly-UnityScript-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="Rocket.API">
-      <HintPath>..\..\..\..\..\Desktop\Rocket Development\Rocket.API.dll</HintPath>
+      <HintPath>..\Rocket.Unturned\Rocket.API.dll</HintPath>
     </Reference>
     <Reference Include="Rocket.Core">
-      <HintPath>..\..\..\..\..\Desktop\Rocket Development\Rocket.Core.dll</HintPath>
+      <HintPath>..\Rocket.Unturned\Rocket.Core.dll</HintPath>
     </Reference>
     <Reference Include="Rocket.Unturned">
-      <HintPath>..\..\..\..\..\Desktop\Rocket Development\Rocket.Unturned.dll</HintPath>
+      <HintPath>..\Rocket.Unturned\Rocket.Unturned.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,7 +57,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Unturned\Unturned_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Rocket.API;
-using Rocket.Unturned.Plugins;
-using Rocket.Unturned.Events;
 using Rocket.Core;
 using Rocket.Unturned;
-using UnityEngine;
-using SDG.Unturned;
+using Rocket.Core.Plugins;
+using Rocket.Unturned.Chat;
 using Rocket.Core.Logging;
-using Rocket.Unturned.Player;
-using Steamworks;
-
+using SDG.Unturned;
+using UnityEngine;
+using SDG;
 
 namespace CustomMOTD
 {
@@ -22,58 +20,57 @@ namespace CustomMOTD
 
         protected override void Load()
         {
-
+            //12345
 
             #region Events
+
             
-
-            Rocket.Unturned.Events.RocketServerEvents.OnPlayerConnected += new RocketServerEvents.PlayerConnected(RocketServerEvents_OnPlayerConnected);
+            U.Events.OnPlayerConnected += Events_OnPlayerConnected;
             #endregion
-
             #region Notifier
-            Rocket.Core.Logging.Logger.LogError("Configuration:");
-            Rocket.Core.Logging.Logger.LogWarning("");
+            Logger.LogError("Configuration:");
+            Logger.LogWarning("");
             Logger.LogWarning("================================================================================");
-            if (this.Configuration.textline1) //If textline1 is true then >
+            if (this.Configuration.Instance.textline1) //If textline1 is true then >
             {
-                Rocket.Core.Logging.Logger.LogWarning("You have enabled text line 1!");
-                Rocket.Core.Logging.Logger.LogWarning("Text line 1: " + this.Configuration.txtline1);
-                Rocket.Core.Logging.Logger.LogWarning("");
+                Logger.LogWarning("You have enabled text line 1!");
+                Logger.LogWarning("Text line 1: " + this.Configuration.Instance.txtline1);
+                Logger.LogWarning("");
             }
             else //Else if textline1 isn't true then >
             {
-                Rocket.Core.Logging.Logger.LogError("You have disabled text line 1!");
-                Rocket.Core.Logging.Logger.LogWarning("");
+                Logger.LogError("You have disabled text line 1!");
+                Logger.LogWarning("");
             }
 
-            if (this.Configuration.textline2)
+            if (this.Configuration.Instance.textline2)
             {
-                Rocket.Core.Logging.Logger.LogWarning("You have enabled text line 2!");
-                Rocket.Core.Logging.Logger.LogWarning("Text line 2: " + this.Configuration.txtline2);
-                Rocket.Core.Logging.Logger.LogWarning("");
+                Logger.LogWarning("You have enabled text line 2!");
+                Logger.LogWarning("Text line 2: " + this.Configuration.Instance.txtline2);
+                Logger.LogWarning("");
             }
             else
             {
-                Rocket.Core.Logging.Logger.LogError("You have disabled text line 2!");
-                Rocket.Core.Logging.Logger.LogWarning("");
+                Logger.LogError("You have disabled text line 2!");
+                Logger.LogWarning("");
             }
-
-            if (this.Configuration.textline3)
+            
+            if (this.Configuration.Instance.textline3)
             {
-                Rocket.Core.Logging.Logger.LogWarning("You have enabled text line 3!");
-                Rocket.Core.Logging.Logger.LogWarning("Text line 3: " + this.Configuration.txtline3);
-                Rocket.Core.Logging.Logger.LogWarning("");
+                Logger.LogWarning("You have enabled text line 3!");
+                Logger.LogWarning("Text line 3: " + this.Configuration.Instance.txtline3);
+                Logger.LogWarning("");
             }
             else
             {
-                Rocket.Core.Logging.Logger.LogError("You have disabled text line 3!");
-                Rocket.Core.Logging.Logger.LogWarning("");
+                Logger.LogError("You have disabled text line 3!");
+                Logger.LogWarning("");
             }
 
-            if (this.Configuration.onlinemsg)
+            if (this.Configuration.Instance.onlinemsg)
             {
-                Rocket.Core.Logging.Logger.LogWarning("You have enabled online messages!");
-                Rocket.Core.Logging.Logger.LogWarning("Text online messages: " + this.Configuration.onlinemsgtext + " " + Steam.Players.Count() + "/" + Steam.MaxPlayers + " " + this.Configuration.onlinemsgtext2);
+                Logger.LogWarning("You have enabled online messages!");
+                Logger.LogWarning("Text online messages: " + this.Configuration.Instance.onlinemsgtext + " " + Steam.Players.Count() + "/" + Steam.MaxPlayers + " " + this.Configuration.Instance.onlinemsgtext2);
                 /*
                  * Steam.Players are the players and .Count() will count every single player in that specific "list"
                  * You can see it as a groceries list - You will count every single item you want to buy and count the items.
@@ -82,11 +79,11 @@ namespace CustomMOTD
             }
             else
             {
-                Rocket.Core.Logging.Logger.LogError("You have disabled online messages!");
+                Logger.LogError("You have disabled online messages!");
             }
-            Rocket.Core.Logging.Logger.LogWarning("");
+            Logger.LogWarning("");
             Logger.LogWarning("================================================================================");
-            Rocket.Core.Logging.Logger.LogWarning("");
+            Logger.LogWarning("");
             Logger.LogError("End of your configuration file;");
             #endregion
 
@@ -99,42 +96,38 @@ namespace CustomMOTD
 
         }
 
-        void RocketServerEvents_OnPlayerConnected(Rocket.Unturned.Player.RocketPlayer player)
+        void Events_OnPlayerConnected(Rocket.Unturned.Player.UnturnedPlayer player)
         {
 
+           
 
-            if (this.Configuration.textline1) //If textline1 = true then >
+            if (this.Configuration.Instance.textline1) //If textline1 = true then >
             {
-                RocketChat.Say(player, this.Configuration.txtline1, RocketChat.GetColorFromName(this.Configuration.line1color, Color.green));
+                UnturnedChat.Say(player, this.Configuration.Instance.txtline1, UnturnedChat.GetColorFromName(this.Configuration.Instance.line1color, Color.green));
             }
-            if (this.Configuration.textline2)//If textline2 = true then >
+            if (this.Configuration.Instance.textline2)//If textline2 = true then >
             {
-                RocketChat.Say(player, this.Configuration.txtline2, RocketChat.GetColorFromName(this.Configuration.line2color, Color.green));
+                UnturnedChat.Say(player, this.Configuration.Instance.txtline2, UnturnedChat.GetColorFromName(this.Configuration.Instance.line2color, Color.green));
             }
-            if (this.Configuration.textline3)//If textline3 = true then >
+            if (this.Configuration.Instance.textline3)//If textline3 = true then >
             {
-                RocketChat.Say(player, this.Configuration.txtline3, RocketChat.GetColorFromName(this.Configuration.line3color, Color.green));
+                UnturnedChat.Say(player, this.Configuration.Instance.txtline3, UnturnedChat.GetColorFromName(this.Configuration.Instance.line3color, Color.green));
             }
-            if (this.Configuration.onlinemsg) //If onlinemsg = true then >
+            if (this.Configuration.Instance.onlinemsg) //If onlinemsg = true then >
             {
-                RocketChat.Say(player, this.Configuration.onlinemsgtext + " " + Steam.Players.Count() + "/" + Steam.MaxPlayers + " " + this.Configuration.onlinemsgtext2, RocketChat.GetColorFromName(this.Configuration.onlinemsgcolor, Color.yellow));
+                UnturnedChat.Say(player, this.Configuration.Instance.onlinemsgtext + " " + Steam.Players.Count() + "/" + Steam.MaxPlayers + " " + this.Configuration.Instance.onlinemsgtext2, UnturnedChat.GetColorFromName(this.Configuration.Instance.onlinemsgcolor, Color.yellow));
             }
-            if (this.Configuration.adminonlinemsg)
-            {
-                if (player.HasPermission("adminmsg"))
-                {
-                    RocketChat.Say(this.Configuration.adminonlinetxt1 + " " + player.CharacterName + " " + this.Configuration.adminonlinetxt2, RocketChat.GetColorFromName(this.Configuration.adminonlinecolor, Color.cyan));
-                }
-                if (player.IsAdmin)
-                {
-                    RocketChat.Say(this.Configuration.adminonlinetxt1 + " " + player.CharacterName + " " + this.Configuration.adminonlinetxt2, RocketChat.GetColorFromName(this.Configuration.adminonlinecolor, Color.cyan));
-                }
-            }
-            
-
 
         }
 
+        protected override void Unload()
+        {
+
+            U.Events.OnPlayerConnected -= Events_OnPlayerConnected;
+
+
+
+        }
 
 
 
